@@ -2,16 +2,27 @@
 <html>
     <head>
         <title>My site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             body {
                 background-color: lightblue;
                 font-family: sans-serif;
                 color: darkblue;
             }
+            button {
+                padding: 20px;
+            }
         </style>
     </head>
     <body>
         <h1>Welcome to my site</h1>
         <p>This site is so cool innit</p>
+        <button onclick="main()">Click me!</button>
+        <script>
+            function main() {
+                document.body.style.backgroundColor = "lightred";
+                document.body.style.color = "darkred";
+            }
+        </script>
     </body>
 </html>
