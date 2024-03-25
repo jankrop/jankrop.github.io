@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-y_IdoXXl.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-kn5WCYSW.css">
-  </head>
-  <body class="h-screen">
-    <div id="app" class="h-full"></div>
-  </body>
+    <title>Title</title>
+</head>
+<body style="
+    margin: 0;
+    background-image: url(https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Dirt_%28texture%29_JE2_BE2.png/revision/latest?cb=20200919012354)
+    /* Some lifeless nerds say that 'inline styles bad because...' but I have attained enlightenment and this is peak CSS */
+">
+    <canvas id="elementCanvas" style="position: absolute"></canvas>  <!-- This is the canvas where the elements are drawn -->
+    <canvas id="viewCanvas" style="position: absolute; opacity: 0.5"></canvas>   <!-- This is the canvas where FOV is delimited -->
+
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px;
+        font-family: monospace;
+    ">
+        <input type="range" min="0" max="360" id="angle">
+        <label for="angle">View angle</label>
+        <br>
+        <input type="range" min="0" max="180" id="fov">
+        <label for="fov">Field of view</label>
+        <br>
+        <input type="range" min="0" max="1000" id="distance">
+        <label for="distance">View distance</label>
+        <input type="checkbox" id="show_unseen">
+        <label for="show_unseen">Show unseen</label>
+        <br>
+    </div>
+
+    <div style="
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px;
+        font-family: monospace;
+    ">
+        This is for demonstration purposes only. <br>
+        Made by Jan Kropiwnicki
+    </div>
+    <script src="main.js"></script>
+</body>
 </html>
